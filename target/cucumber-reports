@@ -1,0 +1,366 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-01-20T01:20:50.807Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verify User able to retrieve ALL existing departments",
+        "description": "",
+        "id": "get-all-existing-departments-api;verify-user-able-to-retrieve-all-existing-departments;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 435000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User set \"Department:GetAllDep\" \"scrum\" webservice api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Department:GetAllDep\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"scrum\"",
+                  "offset": 32
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.setUpAPI(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1415000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User sends GET request",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.makeGETrequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User validates status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User validates response body field",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateResponseBody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "[0].department_id",
+                  "[0].department_name",
+                  "[0].manager_id",
+                  "[0].location_id"
+                ]
+              },
+              {
+                "cells": [
+                  "50",
+                  "Shipping",
+                  "204",
+                  "1500"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetAllExDeps"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-01-20T01:20:52.795Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify User able to retrieve ALL existing departments",
+        "description": "",
+        "id": "get-all-existing-departments-api;verify-user-able-to-retrieve-all-existing-departments;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User set \"Department:GetAllDep\" \"scrum\" webservice api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Department:GetAllDep\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"scrum\"",
+                  "offset": 32
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.setUpAPI(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 130000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User sends GET request",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.makeGETrequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User validates status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User validates response body field",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateResponseBody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "[12].department_id",
+                  "[12].department_name",
+                  "[12].manager_id",
+                  "[12].location_id"
+                ]
+              },
+              {
+                "cells": [
+                  "170",
+                  "Manufacturing",
+                  "",
+                  "1700"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetAllExDeps"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-01-20T01:20:52.936Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Verify User able to retrieve ALL existing departments",
+        "description": "",
+        "id": "get-all-existing-departments-api;verify-user-able-to-retrieve-all-existing-departments;;4",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.noorteck.qa.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User set \"Department:GetAllDep\" \"scrum\" webservice api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Department:GetAllDep\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"scrum\"",
+                  "offset": 32
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.setUpAPI(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User sends GET request",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.makeGETrequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User validates status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User validates response body field",
+            "match": {
+              "location": "com.noorteck.qa.steps.CommonAPISteps.validateResponseBody(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "[24].department_id",
+                  "[24].department_name",
+                  "[24].manager_id",
+                  "[24].location_id"
+                ]
+              },
+              {
+                "cells": [
+                  "272",
+                  "Torey POSTMAN post req",
+                  "123",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetAllExDeps"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Existing Departments API",
+    "description": "",
+    "id": "get-all-existing-departments-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/hr/US205-GetAllDeps.feature",
+    "tags": []
+  }
+]
